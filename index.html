@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="padding: 0 34px;">
+  <div style="display: flex;">
+    <input id="first" style=" height: 50px;" type="text">
+  <p style="margin: 0 30px;"  class="operation">*</p>
+  <input id="second" style=" height: 50px;" type="text">
+ 
+  </div>
+ <div style="display: flex; align-items: center; padding-top: 20px ;">
+  <button style="margin: 0 30px;" onclick="show()" >=</button>
+  <p  id="result"></p>
+ </div>
+
+  <script>
+    let x;
+    let z;
+    let result = document.getElementById('result');
+    function myFunction(){
+      x = parseInt(document.getElementById('first').value);
+      z = parseInt(document.getElementById('second').value);
+      let y = x + z;
+       let b = x - z ;  
+       let c = x / z ;  
+       let d = x * z ;  
+       
+       let k =  y + "  , " +  b + "  ," + c + "  , " + d;
+       return k ;
+    }
+    function show(){
+      result.innerHTML = myFunction();
+    }
+  </script>
+</body>
+</html>
